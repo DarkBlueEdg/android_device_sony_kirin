@@ -21,19 +21,32 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from kirin device
 $(call inherit-product, device/sony/kirin/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AICP stuff.
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_kirin
+PRODUCT_NAME := aicp_kirin
 PRODUCT_DEVICE := kirin
 PRODUCT_BRAND := Sony
 PRODUCT_MODEL := Xperia 10
 PRODUCT_MANUFACTURER := Sony
 
-PRODUCT_GMS_CLIENTID_BASE := android-sony
+# GMS android-sony this unnecessary and unusable...
+#PRODUCT_GMS_CLIENTID_BASE := android-sony
+
+# AICP Build Type release
+AICP_BUILDTYPE := UNOFFICIAL
+
+# AICP Updater for UNOFFICIAL build type release
+PRODUCT_PACKAGES +=  \
+	Updater
+
+# AICP enable vendor restrictions
+PRODUCT_RESTRICT_VENDOR_FILES := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="I3113-user 9 53.0.A.14.47 1552305509 release-keys"
+    PRIVATE_BUILD_DESC="I3113-user 9 53.0.A.14.47 1552305509 release-keys" \
+    DEVICE_MAINTAINERS="DarkBlueEdg" \
+    PRODUCT_NAME="Xperia 10"
 
 BUILD_FINGERPRINT := Sony/I3113_EEA/I3113:9/53.0.A.14.47/1552305509:user/release-keys

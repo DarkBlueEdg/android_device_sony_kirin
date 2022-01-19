@@ -17,6 +17,9 @@
 # inherit from common nile-common
 -include device/sony/nile-common/BoardConfigCommon.mk
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := I3113,I4113,kirin
+
 DEVICE_PATH := device/sony/kirin
 
 # HIDL
