@@ -31,8 +31,7 @@ PRODUCT_BRAND := Sony
 PRODUCT_MODEL := Xperia 10
 PRODUCT_MANUFACTURER := Sony
 
-# GMS android-sony this unnecessary and unusable...
-#PRODUCT_GMS_CLIENTID_BASE := android-sony
+PRODUCT_GMS_CLIENTID_BASE := android-sony
 
 # AICP Build Type release
 AICP_BUILDTYPE := UNOFFICIAL
@@ -43,7 +42,6 @@ PRODUCT_PACKAGES +=  \
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="I3113-user 9 53.0.A.14.47 1552305509 release-keys" \
-    DEVICE_MAINTAINERS="DarkBlueEdg" \
-    PRODUCT_NAME="Xperia 10"
+    DEVICE_MAINTAINERS="DarkBlueEdg"
 
 BUILD_FINGERPRINT := Sony/I3113_EEA/I3113:9/53.0.A.14.47/1552305509:user/release-keys

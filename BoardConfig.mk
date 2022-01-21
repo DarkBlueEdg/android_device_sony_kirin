@@ -17,10 +17,11 @@
 # inherit from common nile-common
 -include device/sony/nile-common/BoardConfigCommon.mk
 
+DEVICE_PATH := device/sony/kirin
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := I3113,I4113,kirin
-
-DEVICE_PATH := device/sony/kirin
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/honami/bluetooth
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
