@@ -40,6 +40,10 @@ AICP_BUILDTYPE := UNOFFICIAL
 PRODUCT_PACKAGES +=  \
 	Updater
 
+# Tethering
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="I3113-user 9 53.0.A.14.47 1552305509 release-keys" \
     DEVICE_MAINTAINERS="DarkBlueEdg"
