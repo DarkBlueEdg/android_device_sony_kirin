@@ -21,9 +21,7 @@ DEVICE_PATH := device/sony/kirin
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := I3113,I4113,kirin
-
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/kirin/bluetooth
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
