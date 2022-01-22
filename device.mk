@@ -39,5 +39,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/thermal/thermanager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/thermanager.xml
 
+# Setup Dalvik VM configs and Hwui
+$(call inherit-product, device/sony/kirin/vm/phone-xxhdpi-3072-dalvik-heap.mk)
+$(call inherit-product, device/sony/kirin/vm/phone-xxhdpi-3072-hwui-memory.mk)
+
 # Inherit from nile-common
 $(call inherit-product, device/sony/nile-common/nile.mk)
